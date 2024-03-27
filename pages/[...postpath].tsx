@@ -4,8 +4,7 @@ import { GetServerSideProps } from 'next';
 import { GraphQLClient, gql } from 'graphql-request';
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-	const endpoint ="https://music-gives-nostalgic-uss.blogspot.com/graphql
-"
+	const endpoint ="https://wordpress-1239756-4432122.cloudwaysapps.com/graphql"
 	const graphQLClient = new GraphQLClient(endpoint);
 	const referringURL = ctx.req.headers?.referer || null;
 	const pathArr = ctx.query.postpath as Array<string>;
@@ -19,7 +18,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 			redirect: {
 				permanent: false,
 				destination: `${
-					'https://music-gives-nostalgic-uss.blogspot.com/' + encodeURI(path as string)
+					'https://wordpress-1239756-4432122.cloudwaysapps.com/' + encodeURI(path as string)
 				}`,
 			},
 		};
